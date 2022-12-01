@@ -24,5 +24,15 @@ namespace CSC385_Project
         {
             InitializeComponent();
         }
+
+        private void executeSync_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void executeAsync_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

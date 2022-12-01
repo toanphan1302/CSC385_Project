@@ -9,5 +9,22 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid />
+    <StackPanel Margin="10" HorizontalAlignment="Stretch"
+                >
+        <TextBlock Margin="0,5" Text="Demo App" 
+                   FontSize="30"
+                   />
+        <Button x:Name="executeSync" Click="executeSync_Click"
+                Content="Normal Execute"
+                Padding="5"
+                FontSize="20"
+                Margin="0,5"
+                />
+        <Button x:Name="executeAsync" Click="executeAsync_Click" 
+                Content="Async Execute"
+                Padding="5"
+                FontSize="20"
+                Margin="0,5"
+                />
+    </StackPanel>
 </Window>
