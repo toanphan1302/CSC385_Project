@@ -26,5 +26,8 @@
                 FontSize="20"
                 Margin="0,5"
                 />
+        <TextBlock  x:Name="resultsWindow"
+                    Margin="0,5"
+                   />
     </StackPanel>
 </Window>
