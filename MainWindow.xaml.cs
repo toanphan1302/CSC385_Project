@@ -27,24 +27,6 @@ namespace CSC385_Project
             InitializeComponent();
         }
 
-        private void executeSync_Click(object sender, RoutedEventArgs e)
-        {
-            var watch = Stopwatch.StartNew();
-            RunDownLoadSync();
-            watch.Stop();
-            var time = watch.ElapsedMilliseconds;
-            resultsWindow.Text += $"Total execution time: {time}";
-        }
-        private async void executeAsync_Click(object sender, RoutedEventArgs e)
-        {
-            var watch = Stopwatch.StartNew();
-            //await RunDownLoadAsync();
-            await RunDownLoadParallelAsync();
-            watch.Stop();
-            var time = watch.ElapsedMilliseconds;
-            resultsWindow.Text += $"Total execution time: {time}";
-        }
-
         private List<string> PrepData()
         {
             List<string> output = new List<string>();
@@ -108,6 +90,34 @@ namespace CSC385_Project
         private void ReportWebsiteInfo(WebsiteDataModel data)
         {
             resultsWindow.Text += $"{data.WebsiteUrl} downloaded: {data.WebsiteData.Length} charaters long \n";
+        }
+
+
+        private void executeSync_Click(object sender, RoutedEventArgs e)
+        {
+            var watch = Stopwatch.StartNew();
+            RunDownLoadSync();
+            watch.Stop();
+            var time = watch.ElapsedMilliseconds;
+            resultsWindow.Text += $"Total execution time: {time}";
+        }
+
+        private async void executeAsync_Click(object sender, RoutedEventArgs e)
+        {
+            var watch = Stopwatch.StartNew();
+            await RunDownLoadAsync();
+            watch.Stop();
+            var time = watch.ElapsedMilliseconds;
+            resultsWindow.Text += $"Total execution time: {time}";
+        }
+
+        private async void executeAsyncParallel_Click(object sender, RoutedEventArgs e)
+        {
+            var watch = Stopwatch.StartNew();
+            await RunDownLoadParallelAsync();
+            watch.Stop();
+            var time = watch.ElapsedMilliseconds;
+            resultsWindow.Text += $"Total execution time: {time}";
         }
     }
 

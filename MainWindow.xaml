@@ -9,25 +9,33 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <StackPanel Margin="10" HorizontalAlignment="Stretch"
-                >
-        <TextBlock Margin="0,5" Text="Demo App" 
-                   FontSize="30"
-                   />
-        <Button x:Name="executeSync" Click="executeSync_Click"
-                Content="Normal Execute"
-                Padding="5"
-                FontSize="20"
-                Margin="0,5"
-                />
-        <Button x:Name="executeAsync" Click="executeAsync_Click" 
-                Content="Async Execute"
-                Padding="5"
-                FontSize="20"
-                Margin="0,5"
-                />
-        <TextBlock  x:Name="resultsWindow"
-                    Margin="0,5"
-                   />
+    <StackPanel Margin="10" HorizontalAlignment="Stretch">
+        <TextBlock
+            Margin="0,5"
+            FontSize="30"
+            Text="Demo App" />
+        <Button
+            x:Name="executeSync"
+            Margin="0,5"
+            Padding="5"
+            Click="executeSync_Click"
+            Content="Normal Execute"
+            FontSize="20" />
+        <Button
+            x:Name="executeAsync"
+            Margin="0,5"
+            Padding="5"
+            Click="executeAsync_Click"
+            Content="Async Execute"
+            FontSize="20" />
+
+        <Button
+            x:Name="executeAsyncParallel"
+            Margin="0,5"
+            Padding="5"
+            Click="executeAsyncParallel_Click"
+            Content="Async Parallel Execute"
+            FontSize="20" />
+        <TextBlock x:Name="resultsWindow" Margin="0,5" />
     </StackPanel>
 </Window>
